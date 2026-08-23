@@ -3,8 +3,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-from rdkit import Chem
-from rdkit.Chem import Draw
+
 
 
 # -----------------------------
@@ -448,22 +447,17 @@ elif page == "Top Lead Analysis":
     with left:
 
         st.subheader("Molecular Structure")
+        st.subheader("Molecular Representation")
 
-        mol = Chem.MolFromSmiles(
-            best["canonical_smiles"]
+        st.code(
+         best["canonical_smiles"],
+         language=None
         )
 
-        if mol:
-
-            img = Draw.MolToImage(
-                mol,
-                size=(550, 450)
-            )
-
-            st.image(
-                img,
-                use_container_width=True
-            )
+        st.caption(
+            "Canonical SMILES representation of the prioritized compound"
+        )
+        
 
     with right:
 
