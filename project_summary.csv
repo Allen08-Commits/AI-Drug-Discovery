@@ -1,0 +1,12 @@
+Parameter,Value
+Disease,Alzheimer's Disease
+Selected Target,APP
+Target ChEMBL ID,CHEMBL2487
+Number of Compounds,1416
+Best ML Model,XGBoost
+Random Split R2,0.8121
+Scaffold Split R2,0.6284
+Final Lead,CHEMBL3927449
+Predicted pIC50,8.8167
+Advanced ADMET Score,0.96
+Final Lead Score,95.77
